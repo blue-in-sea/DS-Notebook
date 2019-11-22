@@ -1,44 +1,39 @@
-public class MyQueue {
-    private Deque<Integer> s1; // in
-    private Deque<Integer> s2; // out
-    
-    public MyQueue() {
-        s1 = new LinkedList<>();
-        s2 = new LinkedList<>();
-    }
+public class QueueByTwoStacks {
+  private Deque<Integer> s1;  // in
+  private Deque<Integer> s2;  // out
 
-    /*
-     * @param element: An integer
-     * @return: nothing
-     */
-    public void push(int element) {
-        s1.offerFirst(element);
-    }
+  public QueueByTwoStacks() {
+    s1 = new LinkedList<>();
+    s2 = new LinkedList<>();
+  }
+  
+  public Integer poll() {
+    move();
+    return s2.pollFirst();
+  }
+  
+  public void offer(int element) {
+    s1.offerFirst(element);
+  }
+  
+  public Integer peek() {
+    move();
+    return s2.peekFirst();
+  }
+  
+  public int size() {
+    return s1.size() + s2.size();
+  }
+  
+  public boolean isEmpty() {
+    return s1.isEmpty() && s2.isEmpty();
+  }
 
-    /*
-     * @return: An integer
-     */
-    public int pop() {
-        move();
-        return s2.pollFirst();
+  private void move() {
+    if (s2.isEmpty()) {
+      while (!s1.isEmpty()) {
+        s2.offerFirst(s1.pollFirst());
+      }
     }
-
-    /*
-     * @return: An integer
-     */
-    public int top() {
-        move();
-        return s2.peekFirst();
-    }
-    
-    /*
-     * helper function to balance stack 
-     */
-    public void move() { 
-        if (s2.isEmpty()) {
-            while (!s1.isEmpty()) {
-                s2.offerFirst(s1.pollFirst());
-            }
-        }
-    }
+  }
 }
