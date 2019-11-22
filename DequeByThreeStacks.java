@@ -1,7 +1,7 @@
 public class MyDeque {
-  Deque<Integer> left;
-  Deque<Integer> right;
-  Deque<Integer> buffer;
+  priavte Deque<Integer> left;
+  priavte Deque<Integer> right;
+  priavte Deque<Integer> buffer;
 
   public MyDeque() {
     left = new ArrayDeque<>();
