@@ -3,7 +3,7 @@ public class MyDeque {
   Deque<Integer> right;
   Deque<Integer> buffer;
 
-  public Solution() {
+  public MyDeque() {
     left = new ArrayDeque<>();
     right = new ArrayDeque<>();
     buffer = new ArrayDeque<>();
