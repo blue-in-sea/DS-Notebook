@@ -55,8 +55,7 @@ public class MinStack {
         stack.push(number);
         if (minStack.isEmpty()) {
             minStack.push(number);
-        } else if (minStack.peek() >= number) {
-            // 这里考虑的相等的情况也会继续push
+        } else if (minStack.peek() >= number) { // 这里考虑的相等的情况也会继续push
             minStack.push(number);
         }
     }
