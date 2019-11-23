@@ -1,5 +1,3 @@
-package DataStr;
-
 /**
  * public class ListNode {
  *   public int value;
