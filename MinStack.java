@@ -37,7 +37,8 @@ public class MinStack {
     }
 }
 
-// Method 2: more space saved, while worst case space complexity doesn't change
+// Method 2: Asynchronously push two stacks with more space saved, 
+//           while worst case space complexity doesn't change
 public class MinStack {
     Stack<Integer> stack;
     Stack<Integer> minStack;
