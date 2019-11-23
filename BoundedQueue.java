@@ -49,4 +49,20 @@ public class BoundedQueue {
   public boolean isFull() {
     return size == array.length;
   }
+  
+  public static void main(String[] args) {
+    BoundedQueue MyArrQueue = new BoundedQueue(100);
+    
+    MyArrQueue.offer(7);
+    MyArrQueue.offer(8);
+    MyArrQueue.offer(9);
+    
+    while (!MyArrQueue.isEmpty()) {
+      System.out.println(MyArrQueue.peek());
+      System.out.println(MyArrQueue.poll());
+    }
+    
+    System.out.println(MyArrQueue.peek());
+    System.out.println(MyArrQueue.poll());
+  }
 }
