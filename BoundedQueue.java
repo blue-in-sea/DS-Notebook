@@ -2,7 +2,7 @@ public class BoundedQueue {
   private int head; 
   private int tail;
   private int size;
-  private Intger[] array;
+  private Integer[] array;
   
   public BoundedQueue(int cap) {
     array = new Integer[cap];
