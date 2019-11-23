@@ -1,5 +1,3 @@
-package DataStr;
-
 public class ListStack {
     private ListNode head;
 
