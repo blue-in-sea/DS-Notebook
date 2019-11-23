@@ -3,9 +3,9 @@
  * and all elements in the input are valid
  */
 public class RainbowSort {
-  public int[] rainbowSort(int[] A) {
-    if (A == null || A.length <= 1) {
-      return A;
+  public int[] rainbowSort(int[] array) {
+    if (array == null || array.length <= 1) {
+      return array;
     }
     // three pointers to divide four intervals
     // 1. the left side of neg is -1 (exclusive of neg)
@@ -14,17 +14,17 @@ public class RainbowSort {
     // 4. between zero and one will be to dicovered (inclusive of both)
     int neg = 0;
     int zero = 0;
-    int array.length - 1;
+    int one = array.length - 1;
     while (zero <= one) {
       if (array[zero] == -1) {
-        swap(A, neg++, zero++);
+        swap(array, neg++, zero++);
       } else if (array[zero] == 0) {
         zero++;  
       } else {
-        swap(A, zero, one--);
+        swap(array, zero, one--);
       }
-      return array;
     }
+    return array;
   }
   
   private void swap(int[] array, int i, int j) {
