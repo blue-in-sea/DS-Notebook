@@ -1,0 +1,23 @@
+Map
+1. map.entrySet();
+  Set<Map.Entry<K,V>>
+  Returns a Set view of the mappings contained in this map
+  
+2. map.keySet();
+  Set<K>
+  Returns a Set view of the keys contained in this map.
+
+3. map.values();
+  Collection<V>
+  Returns a Collection view of the values contained in this map.
+  
+4. map.remove(Object Key)
+  V - Removes the mapping for a key from this map if it is present (The map can contain at most one such mapping.)
+  Returns the value to which this map previously associated the key, or null if the map contained no mapping for the key.
+
+5. map.remove(Object Key, Object Value)
+  defalut boolean
+  Removes the entry for the specified key only if it is currently mapped to the specified value.
+  
+  
+common APIS: map.size(), map.get(K), map.put(K, V), map.containsKey(K), map.containsValue(V), map.clear()
