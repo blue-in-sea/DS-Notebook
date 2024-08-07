@@ -13,7 +13,7 @@ public class SortWithThreeStacks {
   private void sort(LinkedList<Integer> s1, LinkedList<Integer> s2, LinkedList<Integer> s3) {
     while (!s1.isEmpty()) {
       int min = Integer.MAX_VALUE;
-      int cnt = 0;  // deplicates
+      int cnt = 0;  // duplicates
       // step 1: input supply to buffer 
       while (!s1.isEmpty()) {
         int cur = s1.pollFirst();
